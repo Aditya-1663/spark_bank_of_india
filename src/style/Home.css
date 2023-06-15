@@ -1,0 +1,72 @@
+body{
+    /* background-color: black; */
+    background-color: #010141;
+    /* background: url('https://img.freepik.com/free-vector/credit-card-coming-out-mobile-concept-background_1017-36141.jpg?size=626&ext=jpg&ga=GA1.1.433269929.1674957879&semt=ais'); */
+    background-size: cover;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+
+}
+.upper-box{
+    height: 85vh;
+    position: relative;
+}
+.col{
+    /* border: 2px green dotted; */
+    height: 77vh;
+
+    
+}
+.img-box{
+    background: url('https://img.freepik.com/free-vector/credit-card-coming-out-mobile-concept-background_1017-36141.jpg?size=626&ext=jpg&ga=GA1.1.433269929.1674957879&semt=ais');
+
+    /* background: url('https://pastatic.picsart.com/cms-pastatic/b39a0f86-141a-4810-bacd-ff887c53dd54.png?type=webp&to=min&r=600'); */
+    background-size: cover;
+    background-position: center;
+    
+}
+.myfont{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.mycontainer{
+    /* border: 2px green dotted; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card{
+    background: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px rgb(252, 248, 248) solid;
+}
+.card-img-top{
+    width: 100px;
+    /* margin-left: 100px; */
+    transition: 0.8s;
+
+}
+
+.btn{
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    transition: 0.8s;
+}
+.btn:hover{
+    background-color: white;
+    color: #010141;
+}
+.card:hover .btn{
+    border: 1px solid rgb(240, 237, 237);
+}
+.card:hover .card-img-top{
+    transform: rotateY(180deg);
+}
