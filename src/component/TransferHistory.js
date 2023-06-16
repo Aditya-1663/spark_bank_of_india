@@ -1,5 +1,5 @@
 import React from 'react'
-import  { useEffect,useContext,useState,useRef } from 'react'
+import  { useEffect,useContext } from 'react'
 import '../style/CustomerList.css'
 import '../style/Home.css'
 import Datacontext from '../context/Datacontex'
@@ -7,16 +7,23 @@ import Datacontext from '../context/Datacontex'
 
 const TransferHistory = () => {
     const context=useContext(Datacontext)
-    const {data}= context
+    const {hisdata,gethisdata}= context
+    useEffect(()=>{
+      
+
+      gethisdata()
+
+    
+  },[]) 
     var a=1;
   return (
-    <div style={{height:"78vh"}}>
+    <div style={{minHeight:"78vh"}}>
          <div className='container myflex1 mb-5 mt-5' style={{  height:"auto"}}>
         Transfer Money</div>
 
 
         <div className='container'>
-<table class="table table-hover mytable" >
+<table className="table table-hover mytable" >
   <thead>
     <tr>
       <th scope="col">S.No.</th>
@@ -32,16 +39,14 @@ const TransferHistory = () => {
 
   
 
-{data &&data.map((data)=>{ return(
+{hisdata &&hisdata.map((data)=>{ return(
     <tr>
     <th scope="row">{a++}</th>
-    <td>{data.name}</td>
-    <td>{data.email}</td>
-    <td>{data.account}</td>
-    <td className='debits'>{data.amount}</td>
-    <td className='credits'>
-  dgdf
-        </td>
+    <td>{data.date}</td>
+    <td>{data.nameFrom}</td>
+    <td>{data.nameTo}</td>
+    <td className='debits'>{data.Debits}</td>
+    <td className='credits'>{data.Credits}</td>
   
     
   </tr> )})}

@@ -1,5 +1,5 @@
 import React from 'react'
-import  { useEffect,useContext,useState,useRef } from 'react'
+import  { useEffect,useContext } from 'react'
 import '../style/CustomerList.css'
 import '../style/Home.css'
 import Datacontext from '../context/Datacontex'
@@ -22,19 +22,16 @@ const ListTable = () => {
      
    },[]) 
     var a=1;
-  const clickview=()=>{
-   
-
-  }
+ 
     
   return (
-    <div >
+    <div  style={{minHeight:"78vh"}} >
        <div className='container myflex1' style={{height:"auto"}}>
        View All customer</div>
 
 
 <div className='container'>
-<table class="table table-hover mytable">
+<table className="table table-hover mytable">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -59,10 +56,10 @@ const ListTable = () => {
     <td>{data.account}</td>
     <td>{data.amount}</td>
     <td><Link  to="/ViewAllAccount/profile" onClick={()=>{localStorage.setItem('localdata',(data._id))}} >
-  <button type="submit" class="btn innerbtn "  onClick={clickview} style={{border:"1px white solid"}}>View</button> 
+  <button type="submit" className="btn innerbtn "   style={{border:"1px white solid"}}>View</button> 
   </Link>    </td>  
     <td> <Link  to="/ViewAllAccount/tranferprofile" onClick={()=>{localStorage.setItem('localdata',(data._id))}} >
-  <button type="submit" class="btn innerbtn" style={{border:"1px white solid"}}>Transfer</button> </Link>   
+  <button type="submit" className="btn innerbtn" style={{border:"1px white solid"}}>Transfer</button> </Link>   
         </td>
     
   </tr> )})}

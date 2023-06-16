@@ -23,8 +23,8 @@ function App(props) {
   // alert(props.View)
   return (
     <div>
-      <Datalist>
       <Router>
+      <Datalist>
       <Navbar/>
    {/* <ListTable/> */}
    {/* <TransferForm/> */}
@@ -37,7 +37,7 @@ function App(props) {
     <Routes>
          <Route exact path="/ViewAllAccount/tranferprofile" element={  <Transfer/>} />
          <Route exact path="/ViewAllAccount/profile" element={  <Profile />} />
-         <Route path="/ViewAllAccount" element={ <ListTable/>} />
+         <Route exact path="/ViewAllAccount" element={ <ListTable/>} />
          <Route path="/addcustomer" element={ <Addcustomer/>} />
          
          <Route path="/TranferFund" element={<TransferForm/>}/>
@@ -47,9 +47,9 @@ function App(props) {
          </Routes>
       
 
-      </Router>
      <Footer/>
      </Datalist>
+      </Router>
     </div>
   );
 }

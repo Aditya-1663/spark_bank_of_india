@@ -1,31 +1,30 @@
 import React from "react";
 import "../style/Home.css";
-import { Link, useLocation } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const Home = () => {
-  const path = useLocation();
-
-  const customerclick=()=>{
+  
+  const customerclick = () => {
     // alert("aditya")
   }
   return (
-    <div className="mb-5">
-      <div className="container-fluid p-3 position-relative upper-box"  >
-        <div class="row container-fluid p-3">
-          <div class="col container-fluid p-3">
-            <div class="jumbotron mx-3 my-5">
-              <h1 class="display-1 mt-3 mb-3 myfont">Spark Bank of India</h1>
-              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-              <hr class="my-4" />
-              <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-              {/* <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p> */}
+    <div className="mb-5" >
+      <div className="container-fluid p-3  upper-box" style={{height:"auto",position:""}} >
+        <div className="row container-fluid p-3">
+          <div className="col container-fluid p-3">
+            <div className=" mx-3 my-5">
+              <h1 className="display-1 mt-3 mb-3 myfont">Spark Bank of India</h1>
+              <p className="lead">Our Bank offers different type of accounts to meet your financial goals and secure your future. Choose from our wide range of deposit products that are specifically designed to keep your unique requirements in mind.</p>
+              <hr className="my-4" />
+              <p>A simple, convenient and hassle-free option to save and manage your money, open a savings account now. Enjoy an extensive range of features and benefits with Spark bank advantage saving account.</p>
+              <div className=" text-center my-5"> <Link to="/addcustomer">
+                <button type="button" style={{ border: "2px solid white" }} className="btn ">Add Customer</button></Link>
+              </div>
             </div>
 
 
           </div>
-          <div class="col container-fluid p-3 img-box"></div>
+          <div className="col container-fluid p-3 img-box"></div>
 
         </div>
       </div>
@@ -35,29 +34,20 @@ const Home = () => {
       <div className="container ">
 
 
-        {/* <div class="card" style={{width: "18rem"}}>
-  <img src="..." class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <img src="..." class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div> */}
 
 
-        <div class="row" >
 
-          <div class="col-sm-4 pt-3">
-            <div class="card pt-4">
-              <img src="https://cdn-icons-png.flaticon.com/128/476/476863.png" class="card-img-top" alt="..." />
+        <div className="row" >
 
-              <div class="card-body">
-                <h5 class="card-title text-center text-center">Customers</h5>
-                <p class="card-text text-center  text-center">List of all customer</p>
-                <div  class=" text-center"> <Link  to="/ViewAllAccount">
-                  <button  type="button" class="btn ">List of customer</button></Link>
+          <div className="col-sm-4 pt-3">
+            <div className="card pt-4">
+              <img src="https://cdn-icons-png.flaticon.com/128/476/476863.png" className="card-img-top" alt="..." />
+
+              <div className="card-body">
+                <h5 className="card-title text-center text-center">Customers</h5>
+                <p className="card-text text-center  text-center">List of all customer</p>
+                <div className=" text-center"> <Link to="/ViewAllAccount">
+                  <button type="button" className="btn ">List of customer</button></Link>
                 </div>
               </div>
             </div>
@@ -66,14 +56,14 @@ const Home = () => {
 
 
 
-          <div class="col-sm-4 pt-3">
-            <div class="card pt-4">
-              <img src="https://cdn-icons-png.flaticon.com/128/3513/3513504.png" class="card-img-top" alt="..." />
+          <div className="col-sm-4 pt-3">
+            <div className="card pt-4">
+              <img src="https://cdn-icons-png.flaticon.com/128/3513/3513504.png" className="card-img-top" alt="..." />
 
-              <div class="card-body">
-                <h5 class="card-title text-center">Transfer Fund</h5>
-                <p class="card-text text-center">Tranfer Money</p>
-                <Link  to="/TranferFund"><div class=" text-center"><button type="button" class="btn ">Tranfer Fund</button>
+              <div className="card-body">
+                <h5 className="card-title text-center">Transfer Fund</h5>
+                <p className="card-text text-center">Tranfer Money</p>
+                <Link to="/TranferFund"><div className=" text-center"><button type="button" className="btn ">Tranfer Fund</button>
                 </div></Link>
               </div>
             </div>
@@ -83,13 +73,13 @@ const Home = () => {
 
 
 
-          <div class="col-sm-4 pt-3">
-            <div class="card pt-4">
-              <img src="https://cdn-icons-png.flaticon.com/128/9770/9770860.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-center">Transaction</h5>
-                <p class="card-text text-center">View Transaction History</p>
-                <div class=" text-center"> <Link  to="/TransferHistory"><button type="button" class="btn ">Transactions</button>
+          <div className="col-sm-4 pt-3">
+            <div className="card pt-4">
+              <img src="https://cdn-icons-png.flaticon.com/128/9770/9770860.png" className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title text-center">Transaction</h5>
+                <p className="card-text text-center">View Transaction History</p>
+                <div className=" text-center"> <Link to="/TransferHistory"><button type="button" className="btn ">Transactions</button>
                 </Link></div>
               </div>
             </div>
