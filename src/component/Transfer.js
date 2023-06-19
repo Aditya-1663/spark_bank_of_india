@@ -20,7 +20,7 @@ const Transfer = () => {
   }
   useEffect(()=>{
     
-    const jsondata=finddata();
+    finddata();
  
   },[]) 
  

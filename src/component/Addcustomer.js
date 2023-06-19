@@ -51,7 +51,7 @@ const Addcustomer = () => {
    </div>
       <div className="col-lg col-md-6 mb-4">
     <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-  <input  required onChange={onchange} type="email" className="form-control" value={cardential.email} name='email' id="exampleInputEmail1" aria-describedby="emailHelp"/>
+  <input  required onChange={onchange} type="email" className="form-control" value={(cardential.email).toLowerCase()} name='email' id="exampleInputEmail1" aria-describedby="emailHelp"/>
  
 </div>
 </div>

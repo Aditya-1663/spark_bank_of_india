@@ -27,7 +27,7 @@ const ListTable = () => {
   return (
     <div  style={{minHeight:"78vh"}} >
        <div className='container myflex1' style={{height:"auto"}}>
-       View All customer</div>
+       View All Customers</div>
 
 
 <div className='container'>
